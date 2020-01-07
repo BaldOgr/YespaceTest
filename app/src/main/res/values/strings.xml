@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Yaspace Test</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="on_the_week">На неделе</string>
+    <string name="this_month">В этом месяце</string>
+    <string name="next_month">На следующем месяце</string>
+    <string name="this_year">В этом году</string>
+    <string name="number_of_participant">%1$d/%2$d участников</string>
+    <string name="events">События</string>
+</resources>

@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@android:color/white</item>
+        <item name="textStartPadding">16dp</item>
+        <item name="textEndPadding">16dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="chipMinHeight">56dp</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="AppTheme.ChipBase" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipCornerRadius">8dp</item>
+        <item name="chipStrokeColor">#8D95B2</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">#8D95B2</item>
+        <!--        <item name="rippleColor">#8D95B2</item>-->
+        <item name="chipBackgroundColor">@android:color/white</item>
+    </style>
+
+</resources>
