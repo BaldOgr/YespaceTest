@@ -51,7 +51,7 @@ class EventAdapter(val eventList: MutableList<Event> = mutableListOf()) :
         val title = itemView.findViewById<TextView>(R.id.title)
         val date = itemView.findViewById<TextView>(R.id.date)
         val hashTags = itemView.findViewById<ChipGroup>(R.id.chip_group)
-        val iAmGoing = itemView.findViewById<TextView>(R.id.i_am_going)
+        val iAmGoing = itemView.findViewById<ImageView>(R.id.i_am_going)
         val numberOfParticipant = itemView.findViewById<TextView>(R.id.number_of_participant)
     }
 

@@ -2,8 +2,10 @@ package com.github.baldogre.yaspacetest
 
 import android.graphics.LinearGradient
 import android.graphics.Shader
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -29,22 +31,14 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setCustomView(R.layout.action_bar_activity_main)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, android.R.color.white)))
+        supportActionBar?.elevation = 0f
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_filter)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setIcon(R.drawable.ic_events_near_you)
 
-        val textShader = LinearGradient(
-            0f,
-            0f,
-            action_bar_text.paint.measureText(getString(R.string.events)),
-            action_bar_text.textSize,
-            intArrayOf(
-                ContextCompat.getColor(this, R.color.colorAccent),
-                ContextCompat.getColor(this, R.color.color_gradient)
-            ),
-            null,
-            Shader.TileMode.CLAMP
-        )
-
-        action_bar_text.paint.shader = textShader
         chip_group.isSingleSelection = false
+
 
         for (i in 0..5) {
             chip_group.addView(createChip(i))
@@ -53,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         event_list.layoutManager = LinearLayoutManager(this)
 
         event_list.adapter = eventAdapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun getEvents(): MutableList<Event> {

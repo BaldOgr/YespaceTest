@@ -8,4 +8,5 @@
     <string name="this_year">В этом году</string>
     <string name="number_of_participant">%1$d/%2$d участников</string>
     <string name="events">События</string>
+    <string name="add_event">Добавить событие</string>
 </resources>
